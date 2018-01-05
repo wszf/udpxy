@@ -17,7 +17,8 @@ RUN tar -xzvf udpxy-src.tar.gz
 RUN cd udpxy* && make && make install
 
 # Cleanup
-RUN apt-get -qqy autoremove --purge > /dev/null \
+RUN apt-get -qqy remove make gcc > /dev/null \
+    && apt-get -qqy autoremove --purge > /dev/null \
     && apt-get -qqy clean autoclean > /dev/null \
     && rm -rf /var/cache/apt/* /var/cache/debconf/* /var/lib/apt/* /var/lib/dpkg/* /tmp/* /var/tmp/* /var/log/*
 
