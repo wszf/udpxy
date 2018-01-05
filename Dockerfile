@@ -11,4 +11,4 @@ RUN wget http://www.udpxy.com/download/udpxy/udpxy-src.tar.gz
 RUN tar -xzvf udpxy-src.tar.gz
 RUN cd udpxy* && make && make install
 
-CMD ["/usr/local/bin/udpxy", "-T", "-p", "9983"]
+CMD ["/usr/local/bin/udpxy", "-T", "-p", "9983", "-c", "10", "-B", "4096", "-M", "30"]
