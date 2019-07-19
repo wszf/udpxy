@@ -24,5 +24,5 @@ RUN apt-get -qqy remove make gcc > /dev/null \
 
 # Set start command
 #CMD ["/usr/local/bin/udpxy", "-T", "-p", "9983", "-c", "10"]
-#CMD ["/usr/local/bin/udpxy", "-T", "-p", "9983", "-c", "10", "-v"]
-CMD ["/usr/local/bin/udpxy" ${UDPXY_OPTS}]
+CMD ["/usr/local/bin/udpxy", "-T", "-p", "9983", "-c", "10", "-v"]
+#CMD ["/usr/local/bin/udpxy", ${UDPXY_OPTS}]
