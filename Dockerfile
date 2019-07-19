@@ -9,7 +9,7 @@ ENV HOME /tmp
 WORKDIR /tmp
 
 # Install requirements
-RUN apt-get update && apt-get install -y wget make gcc
+RUN apt-get update && apt-get install -y wget make gcc tcpdump
 
 # Install udpxy
 RUN wget http://www.udpxy.com/download/udpxy/udpxy-src.tar.gz
