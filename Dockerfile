@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:jessie-slim
 MAINTAINER xxxxxx
 
 # Set ENV
@@ -25,7 +25,6 @@ RUN apt-get -qqy remove make gcc > /dev/null \
 
 # Set start command
 #CMD ["/usr/local/bin/udpxy", "-T", "-p", "9983", "-c", "10"]
-#ENTRYPOINT ["/usr/local/bin/udpxy","-v","-T","-a","0.0.0.0","-p","4022","-m",${IP},"-c","10","-B","1Mb","-M","60"]
 CMD /usr/local/bin/udpxy -v -T -a 0.0.0.0 -p 4022 -m ${IP} -c 10 -B 1Mb -M 60
 #CMD ["/usr/local/bin/udpxy", "-T", "-p", "9983", "-c", "10", "-v"]
 #CMD ["/usr/local/bin/udpxy", ${UDPXY_OPTS}]
