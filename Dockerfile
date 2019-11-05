@@ -1,5 +1,5 @@
-FROM debian:jessie-slim
-MAINTAINER vistalba
+FROM debian:buster
+MAINTAINER xxxxxx
 
 # Set ENV
 ENV DEBIAN_FRONTEND noninteractive
